@@ -46,9 +46,9 @@ public class SortsTests {
         }
         Arrays.sort(longArrayCorrect);
         
-
         longListCorrect = new ArrayList<Integer>(longList);
         Collections.sort(longListCorrect);
+        Collections.reverse(longListCorrect);
     } 
 
     @Test
@@ -146,7 +146,7 @@ public class SortsTests {
     {
         int[] correctArray = {-80, -1, 0, 1, 2, 3, 4, 9};
         int[] sortedArray = Sorts.insertionSort(array);
-
+        System.out.println(sortedArray);
         assertArrayEquals(correctArray, sortedArray);
     }
 

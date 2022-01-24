@@ -66,11 +66,12 @@ public class Card implements Comparable<Card> {
 	 *	The ranking for values are given by the Card.VALUES array
 	 */
 	public int compareTo (Card c) {
-		if(this.equals(c))
+		if(this.getValue().equals(c.getValue())){
 			return 0;
-
-		return Card.getIndexOfStringInArray(this.getValue(), Card.VALUES) >
-                Card.getIndexOfStringInArray(c.getValue(), Card.VALUES) ? 1 : -1;
+		}
+		int thisValue = Card.getIndexOfStringInArray(this.getValue(), Card.VALUES);
+		int otherValue = Card.getIndexOfStringInArray(c.getValue(), Card.VALUES);
+		return thisValue > otherValue ? 1 : -1;
 	}
 
     private static int suitIndex(String suit) {
@@ -83,7 +84,7 @@ public class Card implements Comparable<Card> {
 
     private static int getIndexOfStringInArray(String str, String[] arr) {
         for(int i = 0; i < arr.length; i++) {
-            if(str.equals(arr[i].toLowerCase()))
+            if(str.toLowerCase().equals(arr[i].toLowerCase()))
                 return i;
         }
         return -1;

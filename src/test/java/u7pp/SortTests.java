@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class SortsTests {
+public class SortTests {
 
     private int[] array = {2, 4, 1, -1, 0, 9, -80, 3};
     private List<Integer> list;
@@ -55,7 +55,7 @@ public class SortsTests {
     public void selectionSort_WhenArrayIsEmpty_ShouldReturnAnEmptyArray() 
     {
         array = new int[0];
-        int[] sortedArray = Sorts.selectionSort(array);
+        int[] sortedArray = Sort.selectionSort(array);
 
         assertEquals(0, sortedArray.length);
     }
@@ -64,7 +64,7 @@ public class SortsTests {
     public void selectionSort_WhenArrayIsUnsorted_ShouldReturnAnAscendingSortedArray()
     {
         int[] correctArray = {-80, -1, 0, 1, 2, 3, 4, 9};
-        int[] sortedArray = Sorts.selectionSort(array);
+        int[] sortedArray = Sort.selectionSort(array);
 
         assertArrayEquals(correctArray, sortedArray);
     }
@@ -72,7 +72,7 @@ public class SortsTests {
     @Test
     public void selectionSort_WhenLongArrayIsUnsorted_ShouldReturnAnAscendingSortedArray()
     {
-        int[] sortedArray = Sorts.selectionSort(longArray);
+        int[] sortedArray = Sort.selectionSort(longArray);
 
         assertArrayEquals(longArrayCorrect, sortedArray);
     }
@@ -81,7 +81,7 @@ public class SortsTests {
     public void selectionSort_WhenCalledWithArray_ShouldNotModifyTheParameter()
     {
         int[] correctArray = {2, 4, 1, -1, 0, 9, -80, 3};
-        Sorts.selectionSort(array);
+        Sort.selectionSort(array);
 
         assertArrayEquals(correctArray, array);
     }
@@ -90,7 +90,7 @@ public class SortsTests {
     public void selectionSort_WhenListIsEmpty_ShouldReturnAnEmptyList() 
     {
         list = new ArrayList<Integer>();
-        List<Integer> sortedList = Sorts.selectionSort(list);
+        List<Integer> sortedList = Sort.selectionSort(list);
 
         assertEquals(0, sortedList.size());
     }
@@ -108,7 +108,7 @@ public class SortsTests {
         correctList.add(-1);
         correctList.add(-80);
 
-        List<Integer> sortedList = Sorts.selectionSort(list);
+        List<Integer> sortedList = Sort.selectionSort(list);
 
         assertEquals(correctList, sortedList);
     }
@@ -116,7 +116,7 @@ public class SortsTests {
     @Test
     public void selectionSort_WhenLongListIsUnsorted_ShouldReturnADescendingSortedList()
     {
-        List<Integer> sortedList = Sorts.selectionSort(longList);
+        List<Integer> sortedList = Sort.selectionSort(longList);
 
         assertEquals(longListCorrect, sortedList);
     }
@@ -126,7 +126,7 @@ public class SortsTests {
     {
         List<Integer> correctList = new ArrayList<Integer>(list);
         
-        Sorts.selectionSort(list);
+        Sort.selectionSort(list);
 
         assertEquals(correctList, list);
     }
@@ -136,7 +136,7 @@ public class SortsTests {
     public void insertionSort_WhenArrayIsEmpty_ShouldReturnAnEmptyArray() 
     {
         array = new int[0];
-        int[] sortedArray = Sorts.insertionSort(array);
+        int[] sortedArray = Sort.insertionSort(array);
 
         assertEquals(0, sortedArray.length);
     }
@@ -145,14 +145,14 @@ public class SortsTests {
     public void insertionSort_WhenArrayIsUnsorted_ShouldReturnAnAscendingSortedArray()
     {
         int[] correctArray = {-80, -1, 0, 1, 2, 3, 4, 9};
-        int[] sortedArray = Sorts.insertionSort(array);
+        int[] sortedArray = Sort.insertionSort(array);
         assertArrayEquals(correctArray, sortedArray);
     }
 
     @Test
     public void insertionSort_WhenLongArrayIsUnsorted_ShouldReturnAnAscendingSortedArray()
     {
-        int[] sortedArray = Sorts.insertionSort(longArray);
+        int[] sortedArray = Sort.insertionSort(longArray);
 
         assertArrayEquals(longArrayCorrect, sortedArray);
     }
@@ -161,7 +161,7 @@ public class SortsTests {
     public void insertionSort_WhenCalledWithArray_ShouldNotModifyTheParameter()
     {
         int[] correctArray = {2, 4, 1, -1, 0, 9, -80, 3};
-        Sorts.insertionSort(array);
+        Sort.insertionSort(array);
 
         assertArrayEquals(correctArray, array);
     }
@@ -170,7 +170,7 @@ public class SortsTests {
     public void insertionSort_WhenListIsEmpty_ShouldReturnAnEmptyList() 
     {
         list = new ArrayList<Integer>();
-        List<Integer> sortedList = Sorts.insertionSort(list);
+        List<Integer> sortedList = Sort.insertionSort(list);
 
         assertEquals(0, sortedList.size());
     }
@@ -188,7 +188,7 @@ public class SortsTests {
         correctList.add(-1);
         correctList.add(-80);
 
-        List<Integer> sortedList = Sorts.insertionSort(list);
+        List<Integer> sortedList = Sort.insertionSort(list);
 
         assertEquals(correctList, sortedList);
     }
@@ -196,7 +196,7 @@ public class SortsTests {
     @Test
     public void insertionSort_WhenLongListIsUnsorted_ShouldReturnADescendingSortedList()
     {
-        List<Integer> sortedList = Sorts.insertionSort(longList);
+        List<Integer> sortedList = Sort.insertionSort(longList);
 
         assertEquals(longListCorrect, sortedList);
     }
@@ -206,7 +206,7 @@ public class SortsTests {
     {
         List<Integer> correctList = new ArrayList<Integer>(list);
         
-        Sorts.selectionSort(list);
+        Sort.selectionSort(list);
 
         assertEquals(correctList, list);
     }

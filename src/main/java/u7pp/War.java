@@ -1,6 +1,4 @@
 package u7pp;
 
 
-public class War {
-    
-}
+// make the War class here.

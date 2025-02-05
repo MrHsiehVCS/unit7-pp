@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,11 +14,11 @@ import java.util.Collections;
 public class SortTests {
 
     private int[] array = {2, 4, 1, -1, 0, 9, -80, 3};
-    private List<Integer> list;
+    private ArrayList<Integer> list;
     private int[] longArray;
     private int[] longArrayCorrect;
-    private List<Integer> longList;
-    private List<Integer> longListCorrect;
+    private ArrayList<Integer> longList;
+    private ArrayList<Integer> longListCorrect;
     private final int LONG_ARRAY_LENGTH = 100;
 
     @BeforeEach
@@ -90,7 +89,7 @@ public class SortTests {
     public void selectionSort_WhenListIsEmpty_ShouldReturnAnEmptyList() 
     {
         list = new ArrayList<Integer>();
-        List<Integer> sortedList = Sort.selectionSort(list);
+        ArrayList<Integer> sortedList = Sort.selectionSort(list);
 
         assertEquals(0, sortedList.size());
     }
@@ -98,7 +97,7 @@ public class SortTests {
     @Test
     public void selectionSort_WhenListIsUnsorted_ShouldReturnADescendingSortedList()
     {
-        List<Integer> correctList = new ArrayList<Integer>();
+        ArrayList<Integer> correctList = new ArrayList<Integer>();
         correctList.add(9);
         correctList.add(4);
         correctList.add(3);
@@ -108,7 +107,7 @@ public class SortTests {
         correctList.add(-1);
         correctList.add(-80);
 
-        List<Integer> sortedList = Sort.selectionSort(list);
+        ArrayList<Integer> sortedList = Sort.selectionSort(list);
 
         assertEquals(correctList, sortedList);
     }
@@ -116,7 +115,7 @@ public class SortTests {
     @Test
     public void selectionSort_WhenLongListIsUnsorted_ShouldReturnADescendingSortedList()
     {
-        List<Integer> sortedList = Sort.selectionSort(longList);
+        ArrayList<Integer> sortedList = Sort.selectionSort(longList);
 
         assertEquals(longListCorrect, sortedList);
     }
@@ -124,7 +123,7 @@ public class SortTests {
     @Test
     public void selectionSort_WhenCalledWithList_ShouldNotModifyTheParameter()
     {
-        List<Integer> correctList = new ArrayList<Integer>(list);
+        ArrayList<Integer> correctList = new ArrayList<Integer>(list);
         
         Sort.selectionSort(list);
 
@@ -170,7 +169,7 @@ public class SortTests {
     public void insertionSort_WhenListIsEmpty_ShouldReturnAnEmptyList() 
     {
         list = new ArrayList<Integer>();
-        List<Integer> sortedList = Sort.insertionSort(list);
+        ArrayList<Integer> sortedList = Sort.insertionSort(list);
 
         assertEquals(0, sortedList.size());
     }
@@ -178,7 +177,7 @@ public class SortTests {
     @Test
     public void insertionSort_WhenListIsUnsorted_ShouldReturnADescendingSortedList()
     {
-        List<Integer> correctList = new ArrayList<Integer>();
+        ArrayList<Integer> correctList = new ArrayList<Integer>();
         correctList.add(9);
         correctList.add(4);
         correctList.add(3);
@@ -188,7 +187,7 @@ public class SortTests {
         correctList.add(-1);
         correctList.add(-80);
 
-        List<Integer> sortedList = Sort.insertionSort(list);
+        ArrayList<Integer> sortedList = Sort.insertionSort(list);
 
         assertEquals(correctList, sortedList);
     }
@@ -196,7 +195,7 @@ public class SortTests {
     @Test
     public void insertionSort_WhenLongListIsUnsorted_ShouldReturnADescendingSortedList()
     {
-        List<Integer> sortedList = Sort.insertionSort(longList);
+        ArrayList<Integer> sortedList = Sort.insertionSort(longList);
 
         assertEquals(longListCorrect, sortedList);
     }
@@ -204,7 +203,7 @@ public class SortTests {
     @Test
     public void insertionSort_WhenCalledWithList_ShouldNotModifyTheParameter()
     {
-        List<Integer> correctList = new ArrayList<Integer>(list);
+        ArrayList<Integer> correctList = new ArrayList<Integer>(list);
         
         Sort.selectionSort(list);
 

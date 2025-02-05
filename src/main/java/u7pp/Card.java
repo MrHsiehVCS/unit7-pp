@@ -89,4 +89,12 @@ public class Card implements Comparable<Card> {
         }
         return -1;
     }
+
+	public boolean equals(Object other) {
+		if(!(other instanceof Card)) {
+			return false;
+		}
+		Card otherCard = (Card)(other);
+		return this.value.equals(otherCard.value) && this.suit.equals(otherCard.suit);
+	}
 }

@@ -30,18 +30,17 @@ Because all the methods in this class are `static`, remember to not have any ins
 
 ## Part C - `War.java`
 
-Create a class called `War` that plays the game `War`. The rules of `War` are as follows:
+Create a class called `War` that plays the classic card game `War`. The rules of `War` are as follows:
 
-- There are two `Player`s in the game.
-- Each `Player`'s name is requested and stored.
-- A `Deck` of `Card`s is evenly dealt to all `Player`s.
+- There is 1 user player in the game, and 1 computer player.
+- A `Deck` of `Card`s is evenly dealt to both `Player`s.
 - Until one `Player` has all the `Card`s
     1. Each `Player` flips over the "top" card in it's hand.
-    2. The `Player` with the highest `Card` gets all of the `Card`s added to their hand. The loser has their `Card`s removed from their hand.
+    2. The `Player` with the highest `Card` gets all of the `Card`s added to the bottom of their hand. The loser has their `Card`s removed from their hand.
     3. If both `Player`s have the same value `Card`, they commit to **War**
     4. In **War**, each `Player` deals three `Card`s face-down, then one `Card` face-up.
     The `Player` with the highest `Card` gets all of the `Card`s from Steps 2 - 4 added to it's hand.
-    In the case of a tie, each player gets their cards back.
+    In the case of a tie, repeat another **War**, the winner getting 4 more cards
     5. Ask each `Player` if they wants to keep playing. If yes, it keeps the `Card`s in his/her hand. Otherwise, the other `Player` wins and the game is over.
 - Display the name of the Winner.
 
@@ -56,6 +55,16 @@ War game = new War();
 game.play();
 ```
 
+Your `War` class must include the following: 
+- A parameterless constructor that sets the game up as intended in the rules
+- A parameterized constructor that takes in 2 `ArrayList<Card>` which represent the human player's and the computer's decks, respectively
+- A getter for the player's deck, and one for the computer's deck
+- A `playTurn` method that processes one turn of the game (there may be multiple wars in 1 turn)
+- A method that returns true if the game is over, and false otherwise
+- A `play` function that runs the full version of the game (this will be tested manually)
+
+The exact naming for each of these functions can be found in `WarTests.java`
+
 
 ## Grading Breakdown
 
@@ -66,7 +75,8 @@ game.play();
 - All code is DRY (Don't repeat yourself): 3 points
 - Part A (Search) Test Cases: 6 points (0.5 pts each)
 - Part B (Sort) Test Cases: 8 points (0.5 pts each)
-- Manual Testing of `War` class: 7 points 
+- Automated Testing of `War` class: 5 points (0.5 pts each)
+- Manual Testing of the `War` user experience (2 pts)
 
 Total: 30 points
 

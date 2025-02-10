@@ -59,9 +59,13 @@ Your `War` class must include the following:
 - A parameterless constructor that sets the game up as intended in the rules
 - A parameterized constructor that takes in 2 `ArrayList<Card>` which represent the human player's and the computer's decks, respectively
 - A getter for the player's deck, and one for the computer's deck
-- A `playTurn` method that processes one turn of the game (there may be multiple wars in 1 turn)
+- A `playTurn` method that processes one turn of the game (there may be multiple wars in 1 turn) 
+  - make sure this function does NOT have any scanner stuff
+  - considering making a helper function for resolving wars
 - A method that returns true if the game is over, and false otherwise
 - A `play` function that runs the full version of the game (this will be tested manually)
+  - this should use a scanner for player input, and print stuff out.
+  - use the other functions in this one
 
 The exact naming for each of these functions can be found in `WarTests.java`
 

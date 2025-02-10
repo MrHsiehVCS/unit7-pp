@@ -151,7 +151,7 @@ public class WarTests {
         ArrayList<Card> compCards = war.getComputerCards();
 
         assertEquals(compCards, deck2After);      
-        assertTrue(playerCards.equals(deck1AfterV1) || compCards.equals(deck1AfterV2));
+        assertTrue(playerCards.equals(deck1AfterV1) || playerCards.equals(deck1AfterV2));
     }
 
     @Test
